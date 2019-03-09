@@ -11,7 +11,7 @@ namespace ManagerSpending
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Views.LoginView();
         }
 
         protected override void OnStart()

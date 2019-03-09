@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ManagerSpending.Views.LoginView"
+             Title="{Binding Title}"
+             IsBusy="{Binding IsBusy}">
+    
+    <ContentPage.Content>
+        <StackLayout Margin="20, 100, 20, 0"
+                     VerticalOptions="End">
+            <StackLayout Margin="0, 0, 0, 70">
+                <Image  Source=""/>
+                <Entry Placeholder="Email..."
+                       Text="{Binding Email}"/>
+                <Entry Placeholder="Password..."
+                       IsPassword="True"
+                       Text="{Binding Password}"/>
+                <Button 
+                       BackgroundColor="LightBlue"
+                       BorderRadius="20"
+                       Text="Login"
+                       TextColor="Black"
+                       Command="{Binding LoginCommand}"/>
+                <ActivityIndicator 
+                       IsRunning="{Binding IsBusy}"
+                       IsVisible="{Binding IsBusy}"
+                       WidthRequest="30"
+                       HeightRequest="30"
+                       HorizontalOptions="Center"
+                       Margin="10"
+                       />
+            </StackLayout>
+            <Label 
+                TextColor="Black"
+                Margin="0, 0, 0, 5"
+                HorizontalOptions="Center"                
+                Text="Design by Xamarin.Form"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
