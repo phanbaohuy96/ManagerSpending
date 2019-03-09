@@ -1,0 +1,12 @@
+D:\Sources\Xamarin\XamarinForm\ManagerSpending\ManagerSpending\ManagerSpending\bin\Debug\netstandard2.0\ManagerSpending.deps.json
+D:\Sources\Xamarin\XamarinForm\ManagerSpending\ManagerSpending\ManagerSpending\bin\Debug\netstandard2.0\ManagerSpending.dll
+D:\Sources\Xamarin\XamarinForm\ManagerSpending\ManagerSpending\ManagerSpending\bin\Debug\netstandard2.0\ManagerSpending.pdb
+D:\Sources\Xamarin\XamarinForm\ManagerSpending\ManagerSpending\ManagerSpending\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Sources\Xamarin\XamarinForm\ManagerSpending\ManagerSpending\ManagerSpending\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+D:\Sources\Xamarin\XamarinForm\ManagerSpending\ManagerSpending\ManagerSpending\obj\Debug\netstandard2.0\ManagerSpending.csproj.CoreCompileInputs.cache
+D:\Sources\Xamarin\XamarinForm\ManagerSpending\ManagerSpending\ManagerSpending\obj\Debug\netstandard2.0\ManagerSpending.AssemblyInfoInputs.cache
+D:\Sources\Xamarin\XamarinForm\ManagerSpending\ManagerSpending\ManagerSpending\obj\Debug\netstandard2.0\ManagerSpending.AssemblyInfo.cs
+D:\Sources\Xamarin\XamarinForm\ManagerSpending\ManagerSpending\ManagerSpending\obj\Debug\netstandard2.0\XamlC.stamp
+D:\Sources\Xamarin\XamarinForm\ManagerSpending\ManagerSpending\ManagerSpending\obj\Debug\netstandard2.0\ManagerSpending.dll
+D:\Sources\Xamarin\XamarinForm\ManagerSpending\ManagerSpending\ManagerSpending\obj\Debug\netstandard2.0\ManagerSpending.pdb
+D:\Sources\Xamarin\XamarinForm\ManagerSpending\ManagerSpending\ManagerSpending\obj\Debug\netstandard2.0\ManagerSpending.csprojAssemblyReference.cache
