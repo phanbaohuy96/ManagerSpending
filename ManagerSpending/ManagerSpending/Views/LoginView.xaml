@@ -9,32 +9,33 @@
         <StackLayout Margin="20, 100, 20, 0"
                      VerticalOptions="End">
             <StackLayout Margin="0, 0, 0, 70">
-                <Image  Source=""/>
-                <Entry Placeholder="Email..."
-                       Text="{Binding Email}"/>
-                <Entry Placeholder="Password..."
-                       IsPassword="True"
-                       Text="{Binding Password}"/>
+                <Image  Source="xamarinlogo.png"
+                        Aspect="AspectFit"/>
+                <Entry  Placeholder="Email..."
+                        Text="{Binding Email}"/>
+                <Entry  Placeholder="Password..."
+                        IsPassword="True"
+                        Text="{Binding Password}"/>
                 <Button 
-                       BackgroundColor="LightBlue"
-                       BorderRadius="20"
-                       Text="Login"
-                       TextColor="Black"
-                       Command="{Binding LoginCommand}"/>
+                        BackgroundColor="#3087d9"
+                        BorderRadius="20"
+                        Text="Login"
+                        TextColor="White"
+                        Command="{Binding LoginCommand}"/>
                 <ActivityIndicator 
-                       IsRunning="{Binding IsBusy}"
-                       IsVisible="{Binding IsBusy}"
-                       WidthRequest="30"
-                       HeightRequest="30"
-                       HorizontalOptions="Center"
-                       Margin="10"
+                        IsRunning="{Binding IsBusy}"
+                        IsVisible="{Binding IsBusy}"
+                        WidthRequest="30"
+                        HeightRequest="30"
+                        HorizontalOptions="Center"
+                        Margin="10"
                        />
             </StackLayout>
             <Label 
-                TextColor="Black"
-                Margin="0, 0, 0, 5"
-                HorizontalOptions="Center"                
-                Text="Design by Xamarin.Form"/>
+                    TextColor="Black"
+                    Margin="0, 0, 0, 5"
+                    HorizontalOptions="Center"                
+                    Text="Design by Xamarin.Form"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
