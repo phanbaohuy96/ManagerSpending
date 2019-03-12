@@ -18,5 +18,19 @@ namespace ManagerSpending.Views
 
             BindingContext = new Models.LoginViewModel();
 		}
-	}
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            await Task.Delay(2000);
+
+            await Task.WhenAll(
+                SplashGrid.FadeTo(0, 2000),
+                logo.ScaleTo(10, 2000)
+            );
+
+            SplashGrid.IsVisible = false;
+        }
+    }
 }
