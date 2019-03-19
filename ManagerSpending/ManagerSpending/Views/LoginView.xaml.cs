@@ -22,15 +22,19 @@ namespace ManagerSpending.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-
-            await Task.Delay(2000);
-
             await Task.WhenAll(
                 SplashGrid.FadeTo(0, 2000),
                 logo.ScaleTo(10, 2000)
             );
 
             SplashGrid.IsVisible = false;
+        }
+
+        private void EmailEntry_Completed(object sender, EventArgs e) => passwordEntry.Focus();        
+
+        private void PasswordEntry_Completed(object sender, EventArgs e)
+        {
+            if (btnLogin.Command.CanExecute(null)) btnLogin.Command.Execute(null);
         }
     }
 }

@@ -26,7 +26,17 @@ namespace ManagerSpending.Models
                     LoginCommand.RaiseCanExecuteChanged();
             }
         }
-        
+
+        public bool IsEnableLogin
+        {
+            get => !IsBusy;
+            set
+            {
+                IsBusy = value;
+                LoginCommand.RaiseCanExecuteChanged();
+            }
+        }
+
         public Mvvm.Commands.DelegateCommand LoginCommand { get; }
 
         //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -38,25 +48,20 @@ namespace ManagerSpending.Models
             LoginCommand = new Mvvm.Commands.DelegateCommand(Login, CanLogin);
         }
 
-        public async void Login()
-        {
-            IsBusy = true;
-            await Task.Delay(2000);
-            IsBusy = false;
-        }
-
-        public bool CanLogin()
-        {
-            return CanLoginAction();
-        }
-
         //////////////////////////////////////////////////////////////////////////////////////////////////////
         ///                                                Handle                                           //
         //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        private bool CanLoginAction()
+        public async void Login()
         {
-            return !string.IsNullOrEmpty(Email) && !string.IsNullOrEmpty(Password);
+            IsEnableLogin = true;
+            await Task.Delay(2000);
+            IsEnableLogin = false;
+        }
+
+        public bool CanLogin()
+        {
+            return !string.IsNullOrEmpty(Email) && !string.IsNullOrEmpty(Password) && IsEnableLogin;
         }
     }
 }
