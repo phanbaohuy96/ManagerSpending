@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ManagerSpending.Models
@@ -39,6 +37,8 @@ namespace ManagerSpending.Models
 
         public Mvvm.Commands.DelegateCommand LoginCommand { get; }
 
+        public event EventHandler LoginSuccessfully;
+
         //////////////////////////////////////////////////////////////////////////////////////////////////////
         ///                                                Method                                           //
         //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -57,6 +57,7 @@ namespace ManagerSpending.Models
             IsEnableLogin = true;
             await Task.Delay(2000);
             IsEnableLogin = false;
+            LoginSuccessfully?.Invoke(null, null);
         }
 
         public bool CanLogin()

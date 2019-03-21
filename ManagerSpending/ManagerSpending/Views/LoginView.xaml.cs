@@ -17,7 +17,13 @@ namespace ManagerSpending.Views
 			InitializeComponent ();
 
             BindingContext = new Models.LoginViewModel();
+            ((Models.LoginViewModel)BindingContext).LoginSuccessfully += LoginView_LoginSuccessfully;
 		}
+
+        private void LoginView_LoginSuccessfully(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new MainPage());
+        }
 
         protected override async void OnAppearing()
         {
