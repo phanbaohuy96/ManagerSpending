@@ -26,6 +26,7 @@
                         VerticalOptions="Center"
                         Grid.Row="0"/>
 
+                <!--Login controls-->
                 <StackLayout Margin="20, 0, 20, 0"
                              Grid.Row="1"
                              VerticalOptions="Center">
@@ -56,6 +57,7 @@
                     
                 </StackLayout>
 
+                <!--Social button-->
                 <StackLayout Margin="20, 0, 20, 0"
                              VerticalOptions="End"
                              Grid.Row="2">
@@ -92,7 +94,8 @@
                 </StackLayout>
 
             </Grid>
-            
+
+            <!--Splash screen-->
             <Grid  x:Name="SplashGrid"
                    BackgroundColor="{StaticResource Primary}">
                 <Image Source="logo"
