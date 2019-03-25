@@ -14,6 +14,18 @@ namespace ManagerSpending.Views
             BindingContext = new Models.MasterDetailPage();
 
             Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(HomePage)));
-        }        
+        }
+
+        private void OnMenuItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var item = (Models.MasterPageItem)e.SelectedItem;
+
+            Type page = item.TargetType;
+            if(page != null && ((Models.MasterDetailPage)BindingContext).CurrentPage != page)
+                Detail = new NavigationPage((Page)Activator.CreateInstance(page));
+
+            //close naivgation menu
+            IsPresented = false;
+        }
     }
 }

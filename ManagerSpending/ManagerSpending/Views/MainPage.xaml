@@ -19,14 +19,14 @@
                     </StackLayout>
                 </Grid>
                 <StackLayout  Grid.Row="1" Spacing="15">
-                    <ListView x:Name="navigationDrawerList" ItemsSource="{Binding masterItems}" RowHeight="60" SeparatorVisibility="None" BackgroundColor="#e8e8e8">
+                    <ListView x:Name="navigationDrawerList" ItemsSource="{Binding masterItems}" RowHeight="60" SeparatorVisibility="None" BackgroundColor="#e8e8e8" ItemSelected="OnMenuItemSelected">
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <ImageCell ImageSource="{Binding Icon}"
+                                <!--<ImageCell ImageSource="{Binding Icon}"
                                            Text="{Binding Title}"
-                                           TextColor="Black"/>
-                                <!--<ViewCell>
-                                    <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="20,10,0,10" Spacing="20">
+                                           TextColor="Black"/>-->
+                                <ViewCell>
+                                    <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="20,10,0,10" Spacing="20" >
                                         <Image Source="{Binding Icon}"
                                                WidthRequest="40"
                                                HeightRequest="40"
@@ -36,7 +36,7 @@
                                                VerticalOptions="Center"
                                                TextColor="Black"/>
                                     </StackLayout>
-                                </ViewCell>-->
+                                </ViewCell>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
